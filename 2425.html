@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>growText</title>
+</head>
+<body>
+    <p id="hi" style="font-size: 10px;">Text</p>
+    <script>
+        var text = document.getElementById("hi");
+        var size = 10
+        var timer = setInterval(expand, 1000);
+        function expand() {
+            text.style.fontSize = size + "px";
+            size = size + 2;
+            if (size == 20) {
+                clearInterval(timer);
+            }
+        }
+    </script>
+</body>
+</html>
